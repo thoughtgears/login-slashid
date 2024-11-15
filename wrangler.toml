@@ -1,0 +1,6 @@
+name = "login"
+compatibility_date = "2024-11-11"
+pages_build_output_dir = "./dist" # Directory where the React app is built
+
+[observability]
+enabled = true

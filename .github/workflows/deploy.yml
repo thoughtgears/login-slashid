@@ -1,0 +1,20 @@
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+      - "**" # Match all branches (including feature branches)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy --project-name login
