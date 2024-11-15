@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "engines": {
+    "npm": "10",
+    "node": "20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
